@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/0x-jerry/project-v#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "vue": "^3.2.26",
     "vue-router": "^4.0.12"
   },

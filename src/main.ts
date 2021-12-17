@@ -1,14 +1,14 @@
+//  windicss
+import 'virtual:windi.css'
+
 import App from './App.vue'
 import { createApp } from 'vue'
 
 const app = createApp(App)
 
-const modules = import.meta.globEager('./modules/*.ts')
-
-for (const key in modules) {
-  const m = modules[key]
-
+// install all modules
+Object.values(import.meta.globEager('./modules/*.ts')).forEach((m) => {
   m.install?.(app)
-}
+})
 
 app.mount('#app')
