@@ -9,7 +9,7 @@ import windicss from 'vite-plugin-windicss'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
-  const host = env.VITE_MAIN_HOST_API
+  const host = env.VITE_MAIN_API_HOST
 
   return {
     resolve: {
