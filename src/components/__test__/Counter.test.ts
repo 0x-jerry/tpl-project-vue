@@ -11,5 +11,14 @@ test('mount component', async () => {
   })
 
   expect(wrapper.find('span').text()).toContain('4')
-  expect(wrapper.html()).toMatchSnapshot()
+
+  const buttons = wrapper.findAll('button')
+
+  // +
+  await buttons[0].trigger('click')
+
+  // -
+  await buttons[1].trigger('click')
+
+  expect(wrapper.emitted('update:modelValue')).toEqual([[5], [3]])
 })
