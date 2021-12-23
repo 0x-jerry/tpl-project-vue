@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -63,6 +65,13 @@ export default defineConfig(({ mode }) => {
 
     optimizeDeps: {
       exclude: [],
+    },
+
+    // Vitest is still in development.
+    // https://vitest.dev/
+    test: {
+      global: true,
+      environment: 'happy-dom',
     },
   }
 })
