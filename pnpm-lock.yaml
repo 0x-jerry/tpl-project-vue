@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@types/node': ^17.0.0
   '@vitejs/plugin-vue': ^2.0.1
-  '@vue/test-utils': ^1.3.0
+  '@vue/test-utils': ^2.0.0-rc.18
   axios: ^0.24.0
   happy-dom: ^2.25.1
   unplugin-auto-import: ^0.5.3
@@ -24,7 +24,7 @@ dependencies:
 devDependencies:
   '@types/node': registry.npmmirror.com/@types/node/17.0.0
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/2.0.1_vite@2.7.3+vue@3.2.26
-  '@vue/test-utils': registry.npmmirror.com/@vue/test-utils/1.3.0_vue@3.2.26
+  '@vue/test-utils': registry.npmmirror.com/@vue/test-utils/2.0.0-rc.18_vue@3.2.26
   happy-dom: registry.npmmirror.com/happy-dom/2.25.1
   unplugin-auto-import: registry.npmmirror.com/unplugin-auto-import/0.5.3_vite@2.7.3
   unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.17.9_vite@2.7.3+vue@3.2.26
@@ -73,12 +73,6 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': registry.nlark.com/@nodelib/fs.scandir/2.1.5
       fastq: registry.nlark.com/fastq/1.13.0
-    dev: true
-
-  registry.nlark.com/abbrev/1.1.1:
-    resolution: {integrity: sha1-+PLIh60Qv2f2NPAFtph/7TF5qsg=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/abbrev/download/abbrev-1.1.1.tgz}
-    name: abbrev
-    version: 1.1.1
     dev: true
 
   registry.nlark.com/anymatch/3.1.2:
@@ -211,26 +205,6 @@ packages:
       typedarray: registry.nlark.com/typedarray/0.0.6
     dev: true
 
-  registry.nlark.com/condense-newlines/0.2.1:
-    resolution: {integrity: sha1-PemFVTE5R10yUCyDsC9gaE0kxV8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/condense-newlines/download/condense-newlines-0.2.1.tgz}
-    name: condense-newlines
-    version: 0.2.1
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      extend-shallow: registry.nlark.com/extend-shallow/2.0.1
-      is-whitespace: registry.nlark.com/is-whitespace/0.3.0
-      kind-of: registry.npmmirror.com/kind-of/3.2.2
-    dev: true
-
-  registry.nlark.com/config-chain/1.1.13:
-    resolution: {integrity: sha1-+tB5Wqamza/57Rto6d/5Q3LCMvQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/config-chain/download/config-chain-1.1.13.tgz}
-    name: config-chain
-    version: 1.1.13
-    dependencies:
-      ini: registry.nlark.com/ini/1.3.8
-      proto-list: registry.nlark.com/proto-list/1.2.4
-    dev: true
-
   registry.nlark.com/core-util-is/1.0.3:
     resolution: {integrity: sha1-pgQtNjTCsn6TKPg3uWX6yDgI24U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/core-util-is/download/core-util-is-1.0.3.tgz}
     name: core-util-is
@@ -284,24 +258,6 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: true
 
-  registry.nlark.com/dom-event-types/1.0.0:
-    resolution: {integrity: sha1-WDCgop4b+Df+UKcM2ApZcjKBPK4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/dom-event-types/download/dom-event-types-1.0.0.tgz}
-    name: dom-event-types
-    version: 1.0.0
-    dev: true
-
-  registry.nlark.com/editorconfig/0.15.3:
-    resolution: {integrity: sha1-vvhMTnX7jcsM5c7o79UcFZmb78U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/editorconfig/download/editorconfig-0.15.3.tgz}
-    name: editorconfig
-    version: 0.15.3
-    hasBin: true
-    dependencies:
-      commander: registry.npmmirror.com/commander/2.20.3
-      lru-cache: registry.nlark.com/lru-cache/4.1.5
-      semver: registry.nlark.com/semver/5.7.1
-      sigmund: registry.nlark.com/sigmund/1.0.1
-    dev: true
-
   registry.nlark.com/es-get-iterator/1.1.2:
     resolution: {integrity: sha1-kjTFSrpxNIbX694CIIZK9eKyg/c=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/es-get-iterator/download/es-get-iterator-1.1.2.tgz}
     name: es-get-iterator
@@ -332,15 +288,6 @@ packages:
     resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/estree-walker/download/estree-walker-2.0.2.tgz}
     name: estree-walker
     version: 2.0.2
-
-  registry.nlark.com/extend-shallow/2.0.1:
-    resolution: {integrity: sha1-Ua99YUrZqfYQ6huvu5idaxxWiQ8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/extend-shallow/download/extend-shallow-2.0.1.tgz}
-    name: extend-shallow
-    version: 2.0.1
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      is-extendable: registry.nlark.com/is-extendable/0.1.1
-    dev: true
 
   registry.nlark.com/fast-glob/3.2.7:
     resolution: {integrity: sha1-/Wy3otfpqnp4RhEehaGW1rL3ZqE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fast-glob/download/fast-glob-3.2.7.tgz}
@@ -387,12 +334,6 @@ packages:
       asynckit: registry.nlark.com/asynckit/0.4.0
       combined-stream: registry.nlark.com/combined-stream/1.0.8
       mime-types: registry.npmmirror.com/mime-types/2.1.34
-    dev: true
-
-  registry.nlark.com/fs.realpath/1.0.0:
-    resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fs.realpath/download/fs.realpath-1.0.0.tgz}
-    name: fs.realpath
-    version: 1.0.0
     dev: true
 
   registry.nlark.com/function-bind/1.1.1:
@@ -454,25 +395,10 @@ packages:
       safer-buffer: registry.nlark.com/safer-buffer/2.1.2
     dev: true
 
-  registry.nlark.com/inflight/1.0.6:
-    resolution: {integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/inflight/download/inflight-1.0.6.tgz}
-    name: inflight
-    version: 1.0.6
-    dependencies:
-      once: registry.nlark.com/once/1.4.0
-      wrappy: registry.nlark.com/wrappy/1.0.2
-    dev: true
-
   registry.nlark.com/inherits/2.0.4:
     resolution: {integrity: sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/inherits/download/inherits-2.0.4.tgz}
     name: inherits
     version: 2.0.4
-    dev: true
-
-  registry.nlark.com/ini/1.3.8:
-    resolution: {integrity: sha1-op2kJbSIBvNHZ6Tvzjlyaa8oQyw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/ini/download/ini-1.3.8.tgz}
-    name: ini
-    version: 1.3.8
     dev: true
 
   registry.nlark.com/internal-slot/1.0.3:
@@ -527,13 +453,6 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       has-tostringtag: registry.nlark.com/has-tostringtag/1.0.0
-    dev: true
-
-  registry.nlark.com/is-extendable/0.1.1:
-    resolution: {integrity: sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-extendable/download/is-extendable-0.1.1.tgz}
-    name: is-extendable
-    version: 0.1.1
-    engines: {node: '>=0.10.0'}
     dev: true
 
   registry.nlark.com/is-extglob/2.1.1:
@@ -618,13 +537,6 @@ packages:
     version: 2.0.1
     dev: true
 
-  registry.nlark.com/is-whitespace/0.3.0:
-    resolution: {integrity: sha1-Fjnssb4DauxppUy7QBz77XEUq38=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-whitespace/download/is-whitespace-0.3.0.tgz}
-    name: is-whitespace
-    version: 0.3.0
-    engines: {node: '>=0.10.0'}
-    dev: true
-
   registry.nlark.com/isarray/1.0.0:
     resolution: {integrity: sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/isarray/download/isarray-1.0.0.tgz}
     name: isarray
@@ -635,19 +547,6 @@ packages:
     resolution: {integrity: sha1-ivHkwSISRMxiRZ+vOJQNTmRKVyM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/isarray/download/isarray-2.0.5.tgz}
     name: isarray
     version: 2.0.5
-    dev: true
-
-  registry.nlark.com/js-beautify/1.14.0:
-    resolution: {integrity: sha1-LOeQxVXVPOHj1zYyJ6z13GkCTC0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/js-beautify/download/js-beautify-1.14.0.tgz}
-    name: js-beautify
-    version: 1.14.0
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      config-chain: registry.nlark.com/config-chain/1.1.13
-      editorconfig: registry.nlark.com/editorconfig/0.15.3
-      glob: registry.npmmirror.com/glob/7.2.0
-      nopt: registry.nlark.com/nopt/5.0.0
     dev: true
 
   registry.nlark.com/json5/2.2.0:
@@ -664,15 +563,6 @@ packages:
     resolution: {integrity: sha1-oG990R0bX9t0PXnIrNTh7Ly9ibM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/kolorist/download/kolorist-1.5.0.tgz}
     name: kolorist
     version: 1.5.0
-    dev: true
-
-  registry.nlark.com/lru-cache/4.1.5:
-    resolution: {integrity: sha1-i75Q6oW+1ZvJ4z3KuCNe6bz0Q80=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/lru-cache/download/lru-cache-4.1.5.tgz}
-    name: lru-cache
-    version: 4.1.5
-    dependencies:
-      pseudomap: registry.nlark.com/pseudomap/1.0.2
-      yallist: registry.nlark.com/yallist/2.1.2
     dev: true
 
   registry.nlark.com/lru-cache/6.0.0:
@@ -712,16 +602,6 @@ packages:
     version: 1.2.5
     dev: true
 
-  registry.nlark.com/nopt/5.0.0:
-    resolution: {integrity: sha1-UwlCu1ilEvzK/lP+IQ8TolNV3Ig=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/nopt/download/nopt-5.0.0.tgz}
-    name: nopt
-    version: 5.0.0
-    engines: {node: '>=6'}
-    hasBin: true
-    dependencies:
-      abbrev: registry.nlark.com/abbrev/1.1.1
-    dev: true
-
   registry.nlark.com/normalize-path/3.0.0:
     resolution: {integrity: sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/normalize-path/download/normalize-path-3.0.0.tgz}
     name: normalize-path
@@ -746,21 +626,6 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  registry.nlark.com/once/1.4.0:
-    resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/once/download/once-1.4.0.tgz}
-    name: once
-    version: 1.4.0
-    dependencies:
-      wrappy: registry.nlark.com/wrappy/1.0.2
-    dev: true
-
-  registry.nlark.com/path-is-absolute/1.0.1:
-    resolution: {integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/path-is-absolute/download/path-is-absolute-1.0.1.tgz}
-    name: path-is-absolute
-    version: 1.0.1
-    engines: {node: '>=0.10.0'}
-    dev: true
-
   registry.nlark.com/path-parse/1.0.7:
     resolution: {integrity: sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/path-parse/download/path-parse-1.0.7.tgz}
     name: path-parse
@@ -780,33 +645,10 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  registry.nlark.com/pretty/2.0.0:
-    resolution: {integrity: sha1-rbx5YLe7/iiaVX3F9zdhmiINBqU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/pretty/download/pretty-2.0.0.tgz}
-    name: pretty
-    version: 2.0.0
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      condense-newlines: registry.nlark.com/condense-newlines/0.2.1
-      extend-shallow: registry.nlark.com/extend-shallow/2.0.1
-      js-beautify: registry.nlark.com/js-beautify/1.14.0
-    dev: true
-
   registry.nlark.com/process-nextick-args/2.0.1:
     resolution: {integrity: sha1-eCDZsWEgzFXKmud5JoCufbptf+I=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/process-nextick-args/download/process-nextick-args-2.0.1.tgz}
     name: process-nextick-args
     version: 2.0.1
-    dev: true
-
-  registry.nlark.com/proto-list/1.2.4:
-    resolution: {integrity: sha1-IS1b/hMYMGpCD2QCuOJv85ZHqEk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/proto-list/download/proto-list-1.2.4.tgz}
-    name: proto-list
-    version: 1.2.4
-    dev: true
-
-  registry.nlark.com/pseudomap/1.0.2:
-    resolution: {integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/pseudomap/download/pseudomap-1.0.2.tgz}
-    name: pseudomap
-    version: 1.0.2
     dev: true
 
   registry.nlark.com/queue-microtask/1.2.3:
@@ -884,13 +726,6 @@ packages:
     version: 2.1.2
     dev: true
 
-  registry.nlark.com/semver/5.7.1:
-    resolution: {integrity: sha1-qVT5Ma66UI0we78Gnv8MAclhFvc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/semver/download/semver-5.7.1.tgz}
-    name: semver
-    version: 5.7.1
-    hasBin: true
-    dev: true
-
   registry.nlark.com/semver/7.3.5:
     resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/semver/download/semver-7.3.5.tgz}
     name: semver
@@ -909,12 +744,6 @@ packages:
       call-bind: registry.nlark.com/call-bind/1.0.2
       get-intrinsic: registry.nlark.com/get-intrinsic/1.1.1
       object-inspect: registry.npmmirror.com/object-inspect/1.11.1
-    dev: true
-
-  registry.nlark.com/sigmund/1.0.1:
-    resolution: {integrity: sha1-P/IfGYytIXX587eBhT/ZTQ0ZtZA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/sigmund/download/sigmund-1.0.1.tgz}
-    name: sigmund
-    version: 1.0.1
     dev: true
 
   registry.nlark.com/source-map/0.6.1:
@@ -1061,18 +890,6 @@ packages:
       foreach: registry.nlark.com/foreach/2.0.5
       has-tostringtag: registry.nlark.com/has-tostringtag/1.0.0
       is-typed-array: registry.nlark.com/is-typed-array/1.1.8
-    dev: true
-
-  registry.nlark.com/wrappy/1.0.2:
-    resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/wrappy/download/wrappy-1.0.2.tgz}
-    name: wrappy
-    version: 1.0.2
-    dev: true
-
-  registry.nlark.com/yallist/2.1.2:
-    resolution: {integrity: sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/yallist/download/yallist-2.1.2.tgz}
-    name: yallist
-    version: 2.1.2
     dev: true
 
   registry.nlark.com/yallist/4.0.0:
@@ -1276,18 +1093,14 @@ packages:
     name: '@vue/shared'
     version: 3.2.26
 
-  registry.npmmirror.com/@vue/test-utils/1.3.0_vue@3.2.26:
-    resolution: {integrity: sha512-Xk2Xiyj2k5dFb8eYUKkcN9PzqZSppTlx7LaQWBbdA8tqh3jHr/KHX2/YLhNFc/xwDrgeLybqd+4ZCPJSGPIqeA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue/test-utils/download/@vue/test-utils-1.3.0.tgz}
-    id: registry.npmmirror.com/@vue/test-utils/1.3.0
+  registry.npmmirror.com/@vue/test-utils/2.0.0-rc.18_vue@3.2.26:
+    resolution: {integrity: sha512-aifolXjVdsogjaLmDoZ0FU8vN+R67aWmg9OuVeED4w5Ij5GFQLrlhM19uhWe/r5xXUL4fXMk3pX5wW6FJP1NcQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue/test-utils/download/@vue/test-utils-2.0.0-rc.18.tgz}
+    id: registry.npmmirror.com/@vue/test-utils/2.0.0-rc.18
     name: '@vue/test-utils'
-    version: 1.3.0
+    version: 2.0.0-rc.18
     peerDependencies:
-      vue: 2.x
-      vue-template-compiler: ^2.x
+      vue: ^3.0.1
     dependencies:
-      dom-event-types: registry.nlark.com/dom-event-types/1.0.0
-      lodash: registry.npmmirror.com/lodash/4.17.21
-      pretty: registry.nlark.com/pretty/2.0.0
       vue: registry.npmmirror.com/vue/3.2.26
     dev: true
 
@@ -1350,12 +1163,6 @@ packages:
       readdirp: registry.nlark.com/readdirp/3.6.0
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
-    dev: true
-
-  registry.npmmirror.com/commander/2.20.3:
-    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/commander/download/commander-2.20.3.tgz}
-    name: commander
-    version: 2.20.3
     dev: true
 
   registry.npmmirror.com/csstype/2.6.19:
@@ -1640,19 +1447,6 @@ packages:
       is-glob: registry.npmmirror.com/is-glob/4.0.3
     dev: true
 
-  registry.npmmirror.com/glob/7.2.0:
-    resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/glob/download/glob-7.2.0.tgz}
-    name: glob
-    version: 7.2.0
-    dependencies:
-      fs.realpath: registry.nlark.com/fs.realpath/1.0.0
-      inflight: registry.nlark.com/inflight/1.0.6
-      inherits: registry.nlark.com/inherits/2.0.4
-      minimatch: registry.nlark.com/minimatch/3.0.4
-      once: registry.nlark.com/once/1.4.0
-      path-is-absolute: registry.nlark.com/path-is-absolute/1.0.1
-    dev: true
-
   registry.npmmirror.com/happy-dom/2.25.1:
     resolution: {integrity: sha512-HGNjJ0rROjpRvGUaZ9exj9hbR2rTeKJyhswmr+YhRr/jQuYmXdokq0oHVUkqo2AkJRnF/8FEWDENdrLorib8lA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/happy-dom/download/happy-dom-2.25.1.tgz}
     name: happy-dom
@@ -1724,12 +1518,6 @@ packages:
       has-tostringtag: registry.nlark.com/has-tostringtag/1.0.0
     dev: true
 
-  registry.npmmirror.com/is-buffer/1.1.6:
-    resolution: {integrity: sha1-76ouqdqg16suoTqXsritUf776L4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/is-buffer/download/is-buffer-1.1.6.tgz}
-    name: is-buffer
-    version: 1.1.6
-    dev: true
-
   registry.npmmirror.com/is-core-module/2.8.0:
     resolution: {integrity: sha1-AyEzbD0JJeSX/Zf12VyxFKXM1Ug=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/is-core-module/download/is-core-module-2.8.0.tgz}
     name: is-core-module
@@ -1784,15 +1572,6 @@ packages:
     hasBin: true
     dev: true
 
-  registry.npmmirror.com/kind-of/3.2.2:
-    resolution: {integrity: sha1-MeohpzS6ubuw8yRm2JOupR5KPGQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/kind-of/download/kind-of-3.2.2.tgz}
-    name: kind-of
-    version: 3.2.2
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      is-buffer: registry.npmmirror.com/is-buffer/1.1.6
-    dev: true
-
   registry.npmmirror.com/local-pkg/0.4.0:
     resolution: {integrity: sha1-5iIRcYE9WggS3YT6gP+xyPzABTE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/local-pkg/download/local-pkg-0.4.0.tgz}
     name: local-pkg
@@ -1800,12 +1579,6 @@ packages:
     engines: {node: '>=14'}
     dependencies:
       mlly: registry.npmmirror.com/mlly/0.2.10
-    dev: true
-
-  registry.npmmirror.com/lodash/4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash/download/lodash-4.17.21.tgz}
-    name: lodash
-    version: 4.17.21
     dev: true
 
   registry.npmmirror.com/micromatch/4.0.4:
