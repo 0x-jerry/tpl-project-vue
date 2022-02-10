@@ -10,7 +10,7 @@ defineEmits<{
 
 <template>
   <div>
-    count: {{ modelValue }}
+    <span> count: {{ modelValue }} </span>
     <button @click="$emit('update:modelValue', modelValue + 1)">+</button>
     <button @click="$emit('update:modelValue', modelValue - 1)">-</button>
   </div>
