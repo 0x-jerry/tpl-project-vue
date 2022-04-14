@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+src/auto-components.d.ts
+src/auto-imports.d.ts
