@@ -10,7 +10,6 @@ import icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Unocss from 'unocss/vite'
 import VueRouter from 'unplugin-vue-router/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
@@ -19,7 +18,7 @@ export default defineConfig(({ mode }) => {
   return {
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, 'src'),
+        '@': path.resolve(__dirname, 'src'),
       },
     },
 
@@ -42,7 +41,7 @@ export default defineConfig(({ mode }) => {
       // https://github.com/antfu/unplugin-auto-import
       imports({
         dts: 'src/auto-imports.d.ts',
-        imports: ['vue', VueRouterAutoImports],
+        imports: ['vue', 'vue-router'],
       }),
 
       // https://github.com/antfu/unplugin-vue-components
