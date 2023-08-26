@@ -6,10 +6,11 @@ import vue from '@vitejs/plugin-vue'
 import imports from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import layouts from 'vite-plugin-vue-layouts'
-import pages from 'vite-plugin-pages'
-import windicss from 'vite-plugin-windicss'
 import icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import Unocss from 'unocss/vite'
+import VueRouter from 'unplugin-vue-router/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
@@ -41,13 +42,13 @@ export default defineConfig(({ mode }) => {
       // https://github.com/antfu/unplugin-auto-import
       imports({
         dts: 'src/auto-imports.d.ts',
-        imports: ['vue', 'vue-router'],
+        imports: ['vue', VueRouterAutoImports],
       }),
 
       // https://github.com/antfu/unplugin-vue-components
       components({
         dts: 'src/auto-components.d.ts',
-        dirs: ['src/components', 'src/biz-components'],
+        dirs: ['src/components'],
         resolvers: [IconsResolver()],
       }),
 
@@ -56,24 +57,21 @@ export default defineConfig(({ mode }) => {
         exclude: ['**/components/*.vue', '**/*.ts'],
       }),
 
-      // https://github.com/hannoeru/vite-plugin-pages
-      pages({
-        exclude: ['**/components/*.vue', '**/*.ts'],
+      // https://github.com/posva/unplugin-vue-router
+      VueRouter({
+        dts: 'src/auto-routes.d.ts',
+        routesFolder: 'src/pages',
+        exclude: ['**/components/*.vue'],
       }),
 
-      // https://github.com/windicss/vite-plugin-windicss
-      windicss({
-        config: {
-          attributify: true,
-        },
-      }),
+      // https://github.com/unocss/unocss
+      Unocss(),
     ],
 
     optimizeDeps: {
       exclude: [],
     },
 
-    // Vitest is still in development.
     // https://vitest.dev/
     test: {
       global: true,
