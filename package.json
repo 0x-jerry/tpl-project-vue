@@ -16,7 +16,7 @@
     "@vue/test-utils": "^2.4.1",
     "happy-dom": "^10.11.0",
     "less": "^4.2.0",
-    "unocss": "^0.55.3",
+    "unocss": "^0.58.0",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-icons": "^0.16.5",
     "unplugin-vue-components": "^0.25.1",
