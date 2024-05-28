@@ -12,6 +12,8 @@
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
+    "@0x-jerry/unocss-preset-brand": "^0.1.4",
+    "@0x-jerry/unplugin-env": "^0.1.1",
     "@types/node": "^20.12.12",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/test-utils": "^2.4.6",

@@ -16,6 +16,12 @@ dependencies:
     version: 4.3.2(vue@3.4.27)
 
 devDependencies:
+  '@0x-jerry/unocss-preset-brand':
+    specifier: ^0.1.4
+    version: 0.1.4
+  '@0x-jerry/unplugin-env':
+    specifier: ^0.1.1
+    version: 0.1.1
   '@types/node':
     specifier: ^20.12.12
     version: 20.12.12
@@ -57,6 +63,30 @@ devDependencies:
     version: 1.6.0(@types/node@20.12.12)(happy-dom@14.11.1)(less@4.2.0)
 
 packages:
+
+  /@0x-jerry/unocss-preset-brand@0.1.4:
+    resolution: {integrity: sha512-WE564U59q9vo89L3bOMMptXtyd4I/FbyO9RsvXXm5iZuOO14onLV9HPCIREWFjyG2ctFOFOYvB54Z9vdFxn9oQ==}
+    engines: {node: '>= 18'}
+    dependencies:
+      '@0x-jerry/utils': 2.2.7
+      '@unocss/core': 0.60.3
+      lodash-es: 4.17.21
+    dev: true
+
+  /@0x-jerry/unplugin-env@0.1.1:
+    resolution: {integrity: sha512-37SJ7Z5Vmfj56vCx2CiHxkH1Lk85wF8J8nPLFAVSk25Ny9aqIpNGfNYpkQyuWp/iWCpxIyG74sH1uhSmLsJMAg==}
+    dependencies:
+      dotenv: 16.4.5
+      unplugin: 1.10.1
+    dev: true
+
+  /@0x-jerry/utils@2.2.7:
+    resolution: {integrity: sha512-+qb/blJNlEdB1ce/0AJyG+YvZUyjScDnkQVIAJykXzVWrWxB4mdFFz2nA6OHqPySquUgrbtRc/DwAzAGw1Ii/Q==}
+    dependencies:
+      fflate: 0.8.2
+      nanoid: 5.0.7
+      picocolors: 1.0.1
+    dev: true
 
   /@ampproject/remapping@2.3.0:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -1533,6 +1563,11 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dev: true
 
+  /dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
+    dev: true
+
   /duplexer@0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
     dev: true
@@ -1677,6 +1712,10 @@ packages:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
     dependencies:
       reusify: 1.0.4
+    dev: true
+
+  /fflate@0.8.2:
+    resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
     dev: true
 
   /fill-range@7.1.1:
@@ -1982,6 +2021,10 @@ packages:
       p-locate: 5.0.0
     dev: true
 
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: true
+
   /loupe@2.3.7:
     resolution: {integrity: sha512-zSMINGVYkdpYSOBmLi0D1Uo7JU9nVdQKrHxC8eYlV+9YKK9WePqAlL7lSlorG/U2Fw1w0hTBmaa/jrQ3UbPHtA==}
     dependencies:
@@ -2113,6 +2156,12 @@ packages:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  /nanoid@5.0.7:
+    resolution: {integrity: sha512-oLxFY2gd2IqnjcYyOXD8XGCftpGtZP2AbHbOkthDkvRywH5ayNtPVy9YlOPcHckXzbLTCHpkb7FB+yuxKV13pQ==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+    dev: true
 
   /needle@3.3.1:
     resolution: {integrity: sha512-6k0YULvhpw+RoLNiQCRKOl09Rv1dPLr8hHnVjHqdolKwDrdNyk+Hmrthi4lIGPPz3r39dLx0hsF5s40sZ3Us4Q==}

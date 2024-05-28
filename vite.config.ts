@@ -8,6 +8,7 @@ import components from 'unplugin-vue-components/vite'
 import layouts from 'vite-plugin-vue-layouts'
 import Unocss from 'unocss/vite'
 import VueRouter from 'unplugin-vue-router/vite'
+import Env from '@0x-jerry/unplugin-env/vite'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
@@ -59,6 +60,11 @@ export default defineConfig(({ mode }) => {
 
       // https://github.com/unocss/unocss
       Unocss(),
+
+      Env({
+        dts: 'types/generated/env.d.ts',
+        envFile: 'src/configs/env.ts',
+      }),
     ],
 
     optimizeDeps: {
