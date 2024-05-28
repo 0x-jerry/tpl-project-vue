@@ -1,7 +1,7 @@
 import { setupLayouts } from 'virtual:generated-layouts'
-import { RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
-import { routes as generatedRoutes } from 'vue-router/auto/routes'
-import { Plugin } from 'vue'
+import { type RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router/auto'
+import { routes as generatedRoutes } from 'vue-router/auto-routes'
+import type { Plugin } from 'vue'
 
 const staticRoutes: RouteRecordRaw[] = [
   {

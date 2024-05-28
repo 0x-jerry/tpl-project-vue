@@ -1,4 +1,4 @@
-import { InjectionKey, UnwrapNestedRefs } from 'vue'
+import type { InjectionKey, UnwrapNestedRefs } from 'vue'
 
 interface Action<S> {
   [key: string]: (store: UnwrapNestedRefs<S>, ...args: any[]) => any
