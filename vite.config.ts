@@ -5,10 +5,9 @@ import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import imports from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
-import layouts from 'vite-plugin-vue-layouts'
 import Unocss from 'unocss/vite'
-import VueRouter from 'unplugin-vue-router/vite'
 import Env from '@0x-jerry/unplugin-env/vite'
+import { VueRoutePlugin } from './vite/VueRoutePlugin'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
@@ -46,17 +45,7 @@ export default defineConfig(({ mode }) => {
         dirs: ['src/components'],
       }),
 
-      // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-      layouts({
-        exclude: ['**/components/*.vue', '**/*.ts'],
-      }),
-
-      // https://github.com/posva/unplugin-vue-router
-      VueRouter({
-        dts: 'types/generated/auto-routes.d.ts',
-        routesFolder: 'src/pages',
-        exclude: ['**/components/*.vue'],
-      }),
+      VueRoutePlugin({}),
 
       // https://github.com/unocss/unocss
       Unocss(),
