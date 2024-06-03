@@ -5,23 +5,23 @@ import { readFileSync } from 'fs'
 import path from 'path'
 import { URI } from 'vscode-uri'
 
-const RouterURI = URI.from({
-  scheme: 'router',
+const VirtualURI = URI.from({
+  scheme: 'virtual',
 })
 
 const RouteURI = URI.from({
-  scheme: 'route',
+  scheme: 'vue-route',
 })
 
-const ROUTES_ID = RouterURI.with({
+const ROUTES_ID = VirtualURI.with({
   path: 'routes.ts',
 }).toString()
 
-const LAYOUTS_ID = RouterURI.with({
+const LAYOUTS_ID = VirtualURI.with({
   path: 'layouts.ts',
 }).toString()
 
-const ROUTER_PREFIX = RouterURI.toString()
+const ROUTER_PREFIX = VirtualURI.toString()
 const ROUTE_PREFIX = RouteURI.toString()
 
 export interface VueRoutePluginOption {

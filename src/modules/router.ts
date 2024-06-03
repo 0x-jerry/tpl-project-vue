@@ -1,4 +1,4 @@
-import { routes } from 'router:routes.ts'
+import { routes } from 'virtual:routes.ts'
 import type { Plugin } from 'vue'
 import { type RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
 
