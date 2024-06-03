@@ -4,3 +4,8 @@ declare module "virtual:routes.ts" {
 
   export const routes: RouteRecordRaw[]
 }
+
+
+declare module "virtual:layouts.ts" {
+  export const layouts: any[]
+}

@@ -41,6 +41,10 @@ export interface VueRoutePluginOption {
   defaultLayout?: string
 }
 
+const PLUGIN_CONFIG = {
+  excludeGlob: ['!**/components/**', '!**/_**']
+}
+
 export function VueRoutePlugin(opt: VueRoutePluginOption = {}) {
   let server: ViteDevServer
 
@@ -114,10 +118,10 @@ async function loadRouteModule(id: string, ctx: LoadRouteModuleContext) {
 
   const vueFilepath = fsPath.replace('.ts', '.vue')
 
-  const route = getRouteBlockCode(vueFilepath)
+  const routeConfig = getRouteBlockCode(vueFilepath)
 
-  if (route?.content) {
-    ctx.cache.set(vueFilepath, route?.content)
+  if (routeConfig?.content) {
+    ctx.cache.set(vueFilepath, routeConfig?.content)
   }
 
   const code = `
@@ -125,7 +129,7 @@ async function loadRouteModule(id: string, ctx: LoadRouteModuleContext) {
 
   export const path = '${convertFsPathToRoutePath(uri.path, query.prefix)}'
 
-  export const route = ${route?.content}
+  export const route = ${routeConfig?.content}
   `
 
   return code
@@ -149,7 +153,7 @@ async function loadRoutesModule(opt: LoadRoutesModuleOption = {}) {
 
   const dir = path.join(process.cwd(), routesDir)
 
-  const files = await fg('**/*.vue', { cwd: dir })
+  const files = await fg(['**/*.vue', ...PLUGIN_CONFIG.excludeGlob], { cwd: dir })
 
   const routeFiles = files.map((file, idx) => {
     const uri = RouteURI.with({
@@ -164,7 +168,6 @@ async function loadRoutesModule(opt: LoadRoutesModuleOption = {}) {
 
   const code = `
   ${routeFiles.join('\n')}
-  import { layouts } from '${LAYOUTS_ID}'
 
   const _routes = [
     ${files.map((_, idx) => `route_${idx}`).join(',\n')}
@@ -176,27 +179,9 @@ async function loadRoutesModule(opt: LoadRoutesModuleOption = {}) {
     return routes.map((config) => {
       const { path, component, route } = config
       const layout = route?.meta?.layout || ${defaultLayoutName}
-  
-      if (layout) {
-        return {
-          path,
-          component: layouts[layout],
-          meta: {
-            isLayout: true,
-            ...route?.meta,
-          },
-          children: [
-            {
-              ...route,
-              component,
-              path: '',
-            },
-          ],
-        }
-      }
-  
+
       return {
-        ...config,
+          ...config,
           path,
           component,
         }
@@ -219,7 +204,7 @@ async function loadLayoutModule(opt: LoadLayoutModuleOption = {}) {
 
   const dir = path.join(process.cwd(), layoutsDir)
 
-  const files = await fg('*.vue', { cwd: dir, absolute: true })
+  const files = await fg(['*.vue', ...PLUGIN_CONFIG.excludeGlob], { cwd: dir, absolute: true })
 
   const routeFiles = files.map((file, idx) => {
     const name = path.basename(file, '.vue')

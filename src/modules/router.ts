@@ -1,3 +1,4 @@
+import { layouts } from 'virtual:layouts.ts'
 import { routes } from 'virtual:routes.ts'
 import type { Plugin } from 'vue'
 import { type RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
@@ -10,6 +11,8 @@ const staticRoutes: RouteRecordRaw[] = [
 ]
 
 export const install: Plugin = (app) => {
+  console.log(routes, layouts)
+
   const router = createRouter({
     history: createWebHashHistory(),
     routes: [...staticRoutes, ...routes],
