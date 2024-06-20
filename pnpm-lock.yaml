@@ -39,7 +39,7 @@ devDependencies:
     version: 3.3.2
   happy-dom:
     specifier: ^14.11.1
-    version: 14.11.1
+    version: 14.12.0
   less:
     specifier: ^4.2.0
     version: 4.2.0
@@ -60,7 +60,7 @@ devDependencies:
     version: 5.2.12(@types/node@20.12.12)(less@4.2.0)
   vitest:
     specifier: ^1.6.0
-    version: 1.6.0(@types/node@20.12.12)(happy-dom@14.11.1)(less@4.2.0)
+    version: 1.6.0(@types/node@20.12.12)(happy-dom@14.12.0)(less@4.2.0)
   vscode-uri:
     specifier: ^3.0.8
     version: 3.0.8
@@ -1796,8 +1796,8 @@ packages:
       duplexer: 0.1.2
     dev: true
 
-  /happy-dom@14.11.1:
-    resolution: {integrity: sha512-JuaGMxD3QlQei6LdAM9mMY9am/cHa978uFbkOpjN5x83DG+QQp/NLyVV4Ru7KOjs70XYZ4KbI0TNiO81nM7uQQ==}
+  /happy-dom@14.12.0:
+    resolution: {integrity: sha512-dHcnlGFY2o2CdxfuYpqwSrBrpj/Kuzv4u4f3TU5yHW1GL24dKij4pv1BRjXnXc3uWo8qsCbToF9weaDsm/He8A==}
     engines: {node: '>=16.0.0'}
     dependencies:
       entities: 4.5.0
@@ -2802,7 +2802,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.11.1)(less@4.2.0):
+  /vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.12.0)(less@4.2.0):
     resolution: {integrity: sha512-H5r/dN06swuFnzNFhq/dnz37bPXnq8xB2xB5JOVk8K09rUtoeNN+LHWkoQ0A/i3hvbUKKcCei9KpbxqHMLhLLA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2837,7 +2837,7 @@ packages:
       chai: 4.4.1
       debug: 4.3.4
       execa: 8.0.1
-      happy-dom: 14.11.1
+      happy-dom: 14.12.0
       local-pkg: 0.5.0
       magic-string: 0.30.10
       pathe: 1.1.2
