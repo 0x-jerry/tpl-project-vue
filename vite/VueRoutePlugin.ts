@@ -4,6 +4,7 @@ import fg from 'fast-glob'
 import { readFileSync } from 'fs'
 import path from 'path'
 import { URI } from 'vscode-uri'
+import { URL } from 'url'
 
 const VirtualURI = URI.from({
   scheme: 'virtual',
@@ -116,7 +117,7 @@ async function loadRouteModule(id: string, ctx: LoadRouteModuleContext) {
 
   const fsPath = path.join(query.cwd, uri.path)
 
-  const vueFilepath = fsPath.replace('.ts', '.vue')
+  const vueFilepath = fsPath.replace(/\.ts$/, '.vue').replace(/\\/g, '/')
 
   const routeConfig = getRouteBlockCode(vueFilepath)
 
@@ -131,6 +132,7 @@ async function loadRouteModule(id: string, ctx: LoadRouteModuleContext) {
 
   export const route = ${routeConfig?.content}
   `
+
 
   return code
 }
@@ -232,11 +234,8 @@ function getRouteBlockCode(sfcPath: string) {
 }
 
 function parseURLQuery(query: string) {
-  return query.split('&').reduce((acc, cur) => {
-    const [key, value] = cur.split('=')
-    acc[key] = value
-    return acc
-  }, {} as Record<string, string>)
+  const u = new URL(`http://localhost?${query}`)
+  return Object.fromEntries( u.searchParams.entries())
 }
 
 /**
@@ -255,5 +254,5 @@ function convertFsPathToRoutePath(fsPath: string, prefix: string) {
 
   const _path = fsPath.replace(/\/index\.ts$/, '').replace(/\.ts$/, '')
 
-  return path.join(prefix, _path)
+  return path.join(prefix, _path).replace(/\\/g, '/')
 }
