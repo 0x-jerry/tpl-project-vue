@@ -41,7 +41,7 @@ importers:
         version: 3.3.3
       happy-dom:
         specifier: ^17.2.2
-        version: 17.2.2
+        version: 17.6.3
       less:
         specifier: ^4.2.2
         version: 4.2.2
@@ -62,7 +62,7 @@ importers:
         version: 6.2.0(@types/node@22.13.9)(jiti@2.4.2)(less@4.2.2)(tsx@4.19.1)
       vitest:
         specifier: ^3.0.7
-        version: 3.0.7(@types/node@22.13.9)(happy-dom@17.2.2)(jiti@2.4.2)(less@4.2.2)(tsx@4.19.1)
+        version: 3.0.7(@types/node@22.13.9)(happy-dom@17.6.3)(jiti@2.4.2)(less@4.2.2)(tsx@4.19.1)
       vscode-uri:
         specifier: ^3.1.0
         version: 3.1.0
@@ -983,8 +983,8 @@ packages:
     resolution: {integrity: sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==}
     engines: {node: '>= 0.4'}
 
-  get-tsconfig@4.10.0:
-    resolution: {integrity: sha512-kGzZ3LWWQcGIAmg6iWvXn0ei6WDtV26wzHRMwDSzmAbcXrTEXxHy6IehI6/4eT6VRKyMP1eF1VqwrVUmE/LR7A==}
+  get-tsconfig@4.10.1:
+    resolution: {integrity: sha512-auHyJ4AgMz7vgS8Hp3N6HXSmlMdUyhSUrfBF16w153rxtLIEOE+HGqaBppczZvnHLqQJfiHotCYpNhl0lUROFQ==}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -1009,9 +1009,9 @@ packages:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}
     engines: {node: '>=10'}
 
-  happy-dom@17.2.2:
-    resolution: {integrity: sha512-3I1/CrNi780sdOhuhUnFtgTWhloSc3quSZwsylI41jycx8o97M6Y4aQAu0phSexGusT7+59BxATh4L4xiY0HcA==}
-    engines: {node: '>=18.0.0'}
+  happy-dom@17.6.3:
+    resolution: {integrity: sha512-UVIHeVhxmxedbWPCfgS55Jg2rDfwf2BCKeylcPSqazLz5w3Kri7Q4xdBJubsr/+VUzFLh0VjIvh13RaDA2/Xug==}
+    engines: {node: '>=20.0.0'}
 
   has-symbols@1.1.0:
     resolution: {integrity: sha512-1cDNdwJ2Jaohmb3sg4OmKaMBwuC48sYni5HUw2DvsC8LjGTLK9h+eb1X6RyuOHe4hT0ULCW68iomhjUoKUqlPQ==}
@@ -2463,7 +2463,7 @@ snapshots:
       dunder-proto: 1.0.1
       es-object-atoms: 1.1.1
 
-  get-tsconfig@4.10.0:
+  get-tsconfig@4.10.1:
     dependencies:
       resolve-pkg-maps: 1.0.0
     optional: true
@@ -2492,7 +2492,7 @@ snapshots:
     dependencies:
       duplexer: 0.1.2
 
-  happy-dom@17.2.2:
+  happy-dom@17.6.3:
     dependencies:
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
@@ -2843,7 +2843,7 @@ snapshots:
   tsx@4.19.1:
     dependencies:
       esbuild: 0.23.1
-      get-tsconfig: 4.10.0
+      get-tsconfig: 4.10.1
     optionalDependencies:
       fsevents: 2.3.3
     optional: true
@@ -2983,7 +2983,7 @@ snapshots:
       less: 4.2.2
       tsx: 4.19.1
 
-  vitest@3.0.7(@types/node@22.13.9)(happy-dom@17.2.2)(jiti@2.4.2)(less@4.2.2)(tsx@4.19.1):
+  vitest@3.0.7(@types/node@22.13.9)(happy-dom@17.6.3)(jiti@2.4.2)(less@4.2.2)(tsx@4.19.1):
     dependencies:
       '@vitest/expect': 3.0.7
       '@vitest/mocker': 3.0.7(vite@6.2.0(@types/node@22.13.9)(jiti@2.4.2)(less@4.2.2)(tsx@4.19.1))
@@ -3007,7 +3007,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.13.9
-      happy-dom: 17.2.2
+      happy-dom: 17.6.3
     transitivePeerDependencies:
       - jiti
       - less
