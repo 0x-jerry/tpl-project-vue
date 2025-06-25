@@ -6,7 +6,10 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["src/**", "vite/**"]
+    "includes": [
+      "src/**",
+      "vite/**"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -55,7 +58,9 @@
   },
   "overrides": [
     {
-      "includes": ["**/*.vue"],
+      "includes": [
+        "**/*.vue"
+      ],
       "linter": {
         "rules": {
           "style": {
@@ -63,7 +68,8 @@
             "useImportType": "off"
           },
           "correctness": {
-            "noUnusedVariables": "off"
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
           }
         }
       }

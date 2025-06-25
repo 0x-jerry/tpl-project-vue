@@ -3,11 +3,11 @@ import {
   presetIcons,
   transformerDirectives,
   transformerVariantGroup,
-  presetWind4,
+  presetMini,
 } from 'unocss'
 import { presetBrand } from '@0x-jerry/unocss-preset-brand'
 
 export default defineConfig({
-  presets: [presetWind4(), presetIcons, presetBrand()],
+  presets: [presetMini(), presetIcons, presetBrand()],
   transformers: [transformerDirectives(), transformerVariantGroup()],
 })
