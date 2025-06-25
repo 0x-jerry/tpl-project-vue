@@ -10,5 +10,5 @@ export const pageStore = createStore(
     plus(s, idx: number) {
       s.counts[idx]++
     },
-  }
+  },
 )

@@ -2,7 +2,6 @@
 import { pageStore } from '../store'
 
 const { store, actions } = pageStore.inject()
-
 </script>
 
 <template>

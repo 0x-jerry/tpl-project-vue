@@ -7,7 +7,9 @@ interface Action<S> {
 type SliceOne<T> = T extends [any, ...infer U] ? U : never
 
 type NormalizedStoreAction<S, A extends Action<S>> = {
-  [key in keyof A]: (...args: SliceOne<Parameters<A[key]>>) => ReturnType<A[key]>
+  [key in keyof A]: (
+    ...args: SliceOne<Parameters<A[key]>>
+  ) => ReturnType<A[key]>
 }
 
 interface StoreStatus<S, A extends Action<S>> {
@@ -18,7 +20,7 @@ interface StoreStatus<S, A extends Action<S>> {
 export function createStore<S extends {}, A extends Action<S>>(
   store: () => S,
   actions: A,
-  symbolName?: string
+  symbolName?: string,
 ) {
   type Status = StoreStatus<S, A>
 

@@ -4,7 +4,7 @@ defineProps<{
 }>()
 
 defineEmits<{
-  (type: 'update:modelValue', val: number): void
+  'update:modelValue': [val: number]
 }>()
 </script>
 

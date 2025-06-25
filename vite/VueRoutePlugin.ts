@@ -1,10 +1,10 @@
 import { parse } from '@vue/compiler-sfc'
-import type { Plugin, ViteDevServer } from 'vite'
 import fg from 'fast-glob'
 import { readFileSync } from 'fs'
 import path from 'path'
-import { URI } from 'vscode-uri'
 import { URL } from 'url'
+import type { Plugin, ViteDevServer } from 'vite'
+import { URI } from 'vscode-uri'
 
 const VirtualURI = URI.from({
   scheme: 'virtual',
@@ -43,7 +43,7 @@ export interface VueRoutePluginOption {
 }
 
 const PLUGIN_CONFIG = {
-  excludeGlob: ['!**/components/**', '!**/_**']
+  excludeGlob: ['!**/components/**', '!**/_**'],
 }
 
 export function VueRoutePlugin(opt: VueRoutePluginOption = {}) {
@@ -76,7 +76,7 @@ export function VueRoutePlugin(opt: VueRoutePluginOption = {}) {
 
       if (id.startsWith(ROUTE_PREFIX)) {
         const ctx: LoadRouteModuleContext = {
-          cache: routeCodeCache
+          cache: routeCodeCache,
         }
 
         return loadRouteModule(id, ctx)
@@ -133,10 +133,8 @@ async function loadRouteModule(id: string, ctx: LoadRouteModuleContext) {
   export const route = ${routeConfig?.content}
   `
 
-
   return code
 }
-
 
 interface LoadRoutesModuleOption {
   /**
@@ -155,7 +153,9 @@ async function loadRoutesModule(opt: LoadRoutesModuleOption = {}) {
 
   const dir = path.join(process.cwd(), routesDir)
 
-  const files = await fg(['**/*.vue', ...PLUGIN_CONFIG.excludeGlob], { cwd: dir })
+  const files = await fg(['**/*.vue', ...PLUGIN_CONFIG.excludeGlob], {
+    cwd: dir,
+  })
 
   const routeFiles = files.map((file, idx) => {
     const uri = RouteURI.with({
@@ -206,7 +206,10 @@ async function loadLayoutModule(opt: LoadLayoutModuleOption = {}) {
 
   const dir = path.join(process.cwd(), layoutsDir)
 
-  const files = await fg(['*.vue', ...PLUGIN_CONFIG.excludeGlob], { cwd: dir, absolute: true })
+  const files = await fg(['*.vue', ...PLUGIN_CONFIG.excludeGlob], {
+    cwd: dir,
+    absolute: true,
+  })
 
   const routeFiles = files.map((file, idx) => {
     const name = path.basename(file, '.vue')
@@ -235,7 +238,7 @@ function getRouteBlockCode(sfcPath: string) {
 
 function parseURLQuery(query: string) {
   const u = new URL(`http://localhost?${query}`)
-  return Object.fromEntries( u.searchParams.entries())
+  return Object.fromEntries(u.searchParams.entries())
 }
 
 /**
